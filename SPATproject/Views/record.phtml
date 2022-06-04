@@ -1,0 +1,37 @@
+<?php require('template/header.phtml') ?>
+
+<link href="CSS/recordStyle.css" rel="stylesheet">
+<link href="CSS/searchStyle.css" rel="stylesheet">
+
+<br>
+<br>
+<!-- Search bar -->
+<form class="login-form" action="record.php"  method="get">
+    <div class="wrap">
+        <div class="search">
+            <input class="searchTerm" type="text" pattern="[^'\x22]+" name="search" placeholder="Type To Search for a record...">
+            <button type="submit" class="searchButton">
+                <i class="fas fa-search"> search </i>
+            </button>
+        </div>
+    </div>
+</form>
+<br>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+            <tr>
+                <th>Form ID</th><th>Company Name</th><th>Contact Name</th><th>Contact No</th><th>Address</th><th>Date</th><th>Task Type</th><th>Quantity</th><th>Vehicle No</th><th>SIM No</th><th>IMEI No</th><th>Remarks</th><th>Technician Name</th><th>Contact Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($view->formDataSet as $formData) {
+                echo '<tr> <td>' . $formData->getID() . '</td> <td>' . $formData->getCompanyName() . '</td> <td>' . $formData->getContactName() . '</td> <td>' . $formData->getContactNo() . '</td> <td>' . $formData->getAddress() . '</td> <td>' . $formData->getDate() . '</td> <td>' . $formData->getTaskType() . '</td> <td>' . $formData->getQuantity() . '</td> <td>' . $formData->getVehicleNo() . '</td> <td>' . $formData->getSimNo() . '</td> <td>' . $formData->getImeiNo() . '</td> <td>' . $formData->getRemarks() .  '</td> <td>' . $formData->getTechnicianName() . '</td> <td>' . $formData->getClientEmail() . '</td> </tr>';
+
+            }
+            ?>
+            </tbody>
+        </table>
+        </div>
+    </form>

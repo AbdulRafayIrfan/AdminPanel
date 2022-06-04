@@ -1,0 +1,79 @@
+<?php require('Views/template/header.phtml') ?>
+<link rel="stylesheet" href="CSS/formStyle.css" />
+<html>
+
+<!-- Title of page -->
+<head>
+    <title>Service Delivery Note</title>
+</head>
+
+<body>
+
+<div class="main">
+    <!-- Heading -->
+    <h1 class="sign" align="center">STS</h1>
+    <h2 class="sign" align="center">Service Delivery Note</h2>
+
+    <form class="form1" method="post" enctype="multipart/form-data">
+        <!-- User input -->
+        <div class="row">
+            <div class="column">
+                <label for="companyName">Company Name</label>
+                <input class="details" type="text" name="companyName" id="companyName" required><br>
+                <label for="contactName">Contact Name</label>
+                <input class="details" type="text"  id="contactName" name="contactName" required><br>
+                <label for="contactNo">Contact No.</label>
+                <input class="details" type="text"id="contactNo" name="contactNo" required><br>
+                <label for="email">Contact Email</label>
+                <input class="details" type="text" id="email" name="email" required><br>
+            </div>
+            <div class="column">
+                <label for="Address">Address</label>
+                <input class="details" type="text" id="Address" name="Address" required><br>
+                <label for="Date">Date</label>
+                <input class="details" type="date" id="Date" name="Date" required><br>
+                <label for="Technician Name">Technician Name</label>
+                <input class="details" type="text" id="Technician Name" name="Technician" required><br>
+            </div>
+        </div>
+        <label  for="task">Task Type</label><br>
+
+        <input class="checkbox" type="checkbox" id="Configuration" name="form[]" value="Configuration">
+        <label for="Configuration"> Configuration</label>
+        <input class="checkbox" type="checkbox" id="Installation" name="form[]" value="Installation">
+        <label for="Installation"> Installation</label>
+        <input class="checkbox" type="checkbox" id="Replacement" name="form[]" value="Replacement">
+        <label for="Replacement"> Replacement</label>
+        <input class="checkbox" type="checkbox" id="Inspection" name="form[]" value="Inspection">
+        <label for="Inspection"> Inspection</label>
+        <input class="checkbox" type="checkbox" id="Transfer" name="form[]" value="Transfer">
+        <label for="Transfer"> Transfer</label><br>
+        <input class="checkbox" type="checkbox" id="Re-Installtion" name="form[]" value="Re-Installtion">
+        <label for="Re-Installtion"> Re-Installtion</label>
+        <input class="checkbox" type="checkbox" id="Removal" name="form[]" value="Removal">
+        <label for="Removal"> Removal</label>
+        <input class="checkbox" type="checkbox" id="Others" name="form[]" value="Others">
+        <label for="Others"> Others</label><br>
+        <br>
+        <label for="Quantity">Quantity</label>
+        <input class="details" type="text" align="center" id="Quantity" name="Quantity" required><br>
+        <label for="Vehicle No.">Vehicle No.</label>
+        <input class="details" type="text" align="center" id="Vehicle No." name="Vehicle" required><br>
+        <label for="Sim No.">SIM No.</label>
+        <input class="details" type="text" align="center" id="Sim No." name="Sim" required><br>
+        <label for="IMEI No.">IMEI No.</label>
+        <input class="details" type="text" align="center" id="IMEI No." name="IMEI" required><br>
+        <label for="Remarks">Remarks</label>
+        <input class="details" type="text" align="center" id="Remarks" name="Remarks" ><br>
+
+        <br>
+        <!-- Sign up button -->
+        <button type="submit" value="submit" name="submit" class="submit" align="center">Submit</button>
+        <!-- link to login page -->
+
+        </form>
+    </form>
+</div>
+
+</body>
+</html>
